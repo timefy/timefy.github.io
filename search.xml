@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>《区块链安全》_翁健主编</title>
+    <title>《区块链安全》_翁健</title>
     <url>/posts/665ba237.html</url>
     <content><![CDATA[<!-- # 《区块链安全》-翁健主编 -->
 <h2 id="网络空间安全专业核心教材体系建设一一建议使用时间"><a href="#网络空间安全专业核心教材体系建设一一建议使用时间" class="headerlink" title="网络空间安全专业核心教材体系建设一一建议使用时间"></a>网络空间安全专业核心教材体系建设一一建议使用时间</h2><p><img src="/img/blockchain_sec/0_1.jpg" alt="教材体系建设"></p>
@@ -60,128 +60,6 @@
       </tags>
   </entry>
   <entry>
-    <title>信息泄露</title>
-    <url>/posts/76189c5e.html</url>
-    <content><![CDATA[<h1 id="超详细敏感信息泄露漏洞总结"><a href="#超详细敏感信息泄露漏洞总结" class="headerlink" title="超详细敏感信息泄露漏洞总结"></a>超详细敏感信息泄露漏洞总结</h1><p><strong>发布日期：2022-03-30 21:42:41</strong></p>
-<h2 id="免责声明"><a href="#免责声明" class="headerlink" title="免责声明"></a>免责声明</h2><p>本文提供的工具、教程、学习路线、精品文章均为原创或互联网收集，旨在提高网络安全技术水平为目的，只做技术研究，谨遵守国家相关法律法规，请勿用于违法用途。</p>
-<h2 id="内容速览"><a href="#内容速览" class="headerlink" title="内容速览"></a>内容速览</h2><ul>
-<li>0x01 漏洞简介</li>
-<li>0x02 漏洞是怎么发生的</li>
-<li>0x03 漏洞危害</li>
-<li>0x04 测试方法</li>
-</ul>
-<h2 id="漏洞简介"><a href="#漏洞简介" class="headerlink" title="漏洞简介"></a>漏洞简介</h2><p>敏感数据包括但不限于：口令、密钥、证书、会话标识、License、隐私数据(如短消息的内容)、授权凭据、个人数据(如姓名、住址、电话等)等。</p>
-<p>在程序文件、配置文件、日志文件、备份文件及数据库中都有可能包含敏感数据。主要分为由版本管理软件导致的泄露, 文件包含导致的泄露和配置错误导致的泄露.</p>
-<h2 id="漏洞是怎么发生的"><a href="#漏洞是怎么发生的" class="headerlink" title="漏洞是怎么发生的"></a>漏洞是怎么发生的</h2><ul>
-<li>未能从公共内容中删除内部内容。例如，在生产环境中，用户有时可以看到开发人员在加价中的评论。</li>
-<li>网站及相关技术配置不安全。例如，如果无法禁用调试和诊断功能，有时可能会为攻击者提供有用的工具，帮助他们获取敏感信息。默认配置也会使网站变得脆弱，例如，通过显示过于冗长的错误消息。</li>
-<li>应用程序的设计和行为缺陷。例如，如果网站在出现不同错误状态时返回不同的响应，这也可以允许攻击者列举敏感数据，例如有效的用户凭据。</li>
-</ul>
-<h2 id="漏洞危害"><a href="#漏洞危害" class="headerlink" title="漏洞危害"></a>漏洞危害</h2><ul>
-<li>扫描内网开放服务</li>
-<li>向内部任意主机的任意端口发送payload来攻击内网服务</li>
-<li>DOS攻击（请求大文件，始终保持连接Keep-Alive Always）</li>
-<li>攻击内网的web应用，例如直接SQL注入、XSS攻击等</li>
-<li>利用file、gopher、dict协议读取本地文件、执行命令等</li>
-</ul>
-<h2 id="测试方法"><a href="#测试方法" class="headerlink" title="测试方法"></a>测试方法</h2><h3 id="检测形式多样"><a href="#检测形式多样" class="headerlink" title="检测形式多样"></a>检测形式多样</h3><p>工具爬虫扫描得到敏感文件的路径，从而找到敏感数据，主要是还是通过关键词爆破。</p>
-<h3 id="手工挖掘"><a href="#手工挖掘" class="headerlink" title="手工挖掘"></a>手工挖掘</h3><p>根据web容器或者网页源代码的查看,Github，找到敏感信息。</p>
-<h3 id="操作系统版本"><a href="#操作系统版本" class="headerlink" title="操作系统版本"></a>操作系统版本</h3><p>可用nmap扫描得知</p>
-<h3 id="中间件的类型、版本"><a href="#中间件的类型、版本" class="headerlink" title="中间件的类型、版本"></a>中间件的类型、版本</h3><p>http返回头, 404报错页面, 使用工具（如whatweb）</p>
-<h3 id="Web敏感信息"><a href="#Web敏感信息" class="headerlink" title="Web敏感信息"></a>Web敏感信息</h3><ul>
-<li>phpinfo()信息泄露: <code>http://[ip]/test.php</code>，<code>http://[ip]/phpinfo.php</code></li>
-<li>测试网页泄露在外网: <code>test.cgi</code>、<code>phpinfo.php</code>、<code>info.php</code>等</li>
-<li>编辑器备份文件泄漏在外网: <code>http://[ip]/test.php.swp</code>、<code>http://[ip]/test.php.bak</code>、<code>http://[ip]/test.jsp.old</code>、<code>http://[ip]/cgi~</code></li>
-<li>版本管理工具（如git）文件信息泄露: <code>http://[ip]/.git/config</code>、<code>http://[ip]/CVS/Entriesp</code>、<code>http://[ip]/.svn/entriesp</code></li>
-<li>HTTP认证信息泄露: <code>http://[ip]/basic/index.php</code></li>
-<li>管理后台地址泄露: <code>http://[ip]/login.php</code>、<code>http://[ip]/admin.php</code>、<code>http://[ip]/manager.php</code>、 <code>http://[ip]/admin_login.php</code></li>
-</ul>
-<h2 id="防止敏感信息泄露"><a href="#防止敏感信息泄露" class="headerlink" title="防止敏感信息泄露"></a>防止敏感信息泄露</h2><p>在进行网站和系统维护时，请务必注意以下潜在风险和防范措施：</p>
-<h3 id="员工信息泄露"><a href="#员工信息泄露" class="headerlink" title="员工信息泄露"></a>员工信息泄露</h3><p>避免泄露员工邮箱和分机号码，这可能被恶意利用，例如社交工程攻击或生成字典攻击。</p>
-<h3 id="错误页面暴露信息"><a href="#错误页面暴露信息" class="headerlink" title="错误页面暴露信息"></a>错误页面暴露信息</h3><p>确保错误页面不暴露敏感信息，包括但不限于 MySQL 错误、PHP 错误、以及 CMS 版本等。</p>
-<h3 id="探针文件"><a href="#探针文件" class="headerlink" title="探针文件"></a>探针文件</h3><p>谨慎处理探针文件，如 robots.txt 和 phpMyAdmin，防止未授权访问。</p>
-<h3 id="网站源码备份文件"><a href="#网站源码备份文件" class="headerlink" title="网站源码备份文件"></a>网站源码备份文件</h3><p>避免将网站源码备份文件（如 .rar、.tar.gz、.zip）存放在可公开访问的位置，以免泄露敏感信息。</p>
-<h3 id="网络信息泄露"><a href="#网络信息泄露" class="headerlink" title="网络信息泄露"></a>网络信息泄露</h3><p>定期检查网络配置，防止 DNS 域传送漏洞、运维监控系统弱口令、网络拓扑泄露等问题。</p>
-<h3 id="第三方软件应用"><a href="#第三方软件应用" class="headerlink" title="第三方软件应用"></a>第三方软件应用</h3><p>审查 GitHub 上的源码，确保其中不包含敏感信息，防止数据库、邮箱密码泄露。</p>
-<h3 id="敏感信息搜集工具"><a href="#敏感信息搜集工具" class="headerlink" title="敏感信息搜集工具"></a>敏感信息搜集工具</h3><p>避免使用或谨慎使用搜集敏感信息的工具，包括但不限于 weakfilescan、BBScan、whatweb、dnsenum 等。</p>
-<h2 id="安全工具推荐"><a href="#安全工具推荐" class="headerlink" title="安全工具推荐"></a>安全工具推荐</h2><ul>
-<li><a href="https://github.com/ring04h/weakfilescan">weakfilescan</a></li>
-<li><a href="https://github.com/lijiejie/BBScan">BBScan</a></li>
-<li><a href="https://github.com/urbanadventurer/WhatWeb">whatweb</a></li>
-<li><a href="https://github.com/fwaeytens/dnsenum">dnsenum</a></li>
-<li><a href="https://github.com/">github</a></li>
-</ul>
-<p><strong>注意：在进行任何安全检查和调整时，请确保遵循合法合规的道德准则，以保护系统和用户的利益。</strong></p>
-<blockquote>
-<p>转载自<a href="https://cloud.tencent.com/developer/article/1969038">超详细敏感信息泄露漏洞总结</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>web安全</category>
-        <category>信息泄露</category>
-      </categories>
-      <tags>
-        <tag>web安全</tag>
-        <tag>信息泄露</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>优化日记</title>
-    <url>/posts/ca1c84cd.html</url>
-    <content><![CDATA[<h3 id="准备优化下"><a href="#准备优化下" class="headerlink" title="准备优化下"></a>准备优化下</h3><blockquote>
-<p>2023-11-23 14:27今天先优化一点点</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>小记</tag>
-        <tag>优化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>搭建小记</title>
-    <url>/posts/53191.html</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
-<p>其实之前一直想用github搭一个了，无奈磕磕碰碰，遇点小困难就却难而退了，这几天在其他事情上也是这样，就换个地折腾一下。</p>
-</blockquote>
-<h3 id="感谢的大佬"><a href="#感谢的大佬" class="headerlink" title="感谢的大佬"></a>感谢的大佬</h3><ol>
-<li><a href="https://lin64850.github.io/">Eureka</a></li>
-<li><a href="https://space.bilibili.com/13282871">卷二兔</a></li>
-</ol>
-<h3 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h3><ol>
-<li><a href="https://hexo.io/zh-cn/docs/">Hexo</a></li>
-<li><a href="https://butterfly.js.org/posts/21cfbf15/">butterfly</a></li>
-</ol>
-<h3 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h3><ol>
-<li>安装Node.js</li>
-<li>安装Git <!--这个没想清楚作用--></li>
-<li>安装Hexo<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line">hexo init &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></li>
-<li>安装Hexo-theme-butterfly<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-theme-butterfly</span><br><span class="line">npm update hexo-theme-butterfly</span><br><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure></li>
-<li>配置_config.yml和_config.butterfly.yml文件</li>
-<li>实施部署<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>上面少了一块github的配置，就不说了哈哈</p>
-</blockquote>
-</li>
-</ol>
-<h3 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h3><blockquote>
-<p>昨天一整天都不在状态(或许以后很长一段时间都这样哈哈，也没关系吧，速度调节，欧力给！)，晚上临时想着也不想做那件事(正在发愁的一件事，搭完之后还是要回归那件事的)，也就想折腾一下个人博客，看看视频，跟着上面两位大哥引荐与教学，很快可以搞定的，出版就这样，其实我还有一个其他博客的，但是要买服务器、域名啥的，之后过期就丢了哈哈！</p>
-</blockquote>
-<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><blockquote>
-<p>之后有空就玩玩这个，看看有没啥需要记录的。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>小记</tag>
-        <tag>搭建</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>《启发》_罗振宇</title>
     <url>/posts/64e2ab84.html</url>
     <content><![CDATA[<blockquote>
@@ -210,8 +88,23 @@
         <category>《启发》</category>
       </categories>
       <tags>
-        <tag>学习记录</tag>
         <tag>二课</tag>
+        <tag>阅读</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>优化日记</title>
+    <url>/posts/ca1c84cd.html</url>
+    <content><![CDATA[<h3 id="准备优化下"><a href="#准备优化下" class="headerlink" title="准备优化下"></a>准备优化下</h3><blockquote>
+<p>2023-11-23 14:27今天先优化一点点</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>小记</tag>
+        <tag>优化</tag>
       </tags>
   </entry>
   <entry>
@@ -298,6 +191,113 @@
         <tag>学习记录</tag>
         <tag>隐私保护</tag>
         <tag>身份认证</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>信息泄露</title>
+    <url>/posts/76189c5e.html</url>
+    <content><![CDATA[<h1 id="超详细敏感信息泄露漏洞总结"><a href="#超详细敏感信息泄露漏洞总结" class="headerlink" title="超详细敏感信息泄露漏洞总结"></a>超详细敏感信息泄露漏洞总结</h1><p><strong>发布日期：2022-03-30 21:42:41</strong></p>
+<h2 id="免责声明"><a href="#免责声明" class="headerlink" title="免责声明"></a>免责声明</h2><p>本文提供的工具、教程、学习路线、精品文章均为原创或互联网收集，旨在提高网络安全技术水平为目的，只做技术研究，谨遵守国家相关法律法规，请勿用于违法用途。</p>
+<h2 id="内容速览"><a href="#内容速览" class="headerlink" title="内容速览"></a>内容速览</h2><ul>
+<li>0x01 漏洞简介</li>
+<li>0x02 漏洞是怎么发生的</li>
+<li>0x03 漏洞危害</li>
+<li>0x04 测试方法</li>
+</ul>
+<h2 id="漏洞简介"><a href="#漏洞简介" class="headerlink" title="漏洞简介"></a>漏洞简介</h2><p>敏感数据包括但不限于：口令、密钥、证书、会话标识、License、隐私数据(如短消息的内容)、授权凭据、个人数据(如姓名、住址、电话等)等。</p>
+<p>在程序文件、配置文件、日志文件、备份文件及数据库中都有可能包含敏感数据。主要分为由版本管理软件导致的泄露, 文件包含导致的泄露和配置错误导致的泄露.</p>
+<h2 id="漏洞是怎么发生的"><a href="#漏洞是怎么发生的" class="headerlink" title="漏洞是怎么发生的"></a>漏洞是怎么发生的</h2><ul>
+<li>未能从公共内容中删除内部内容。例如，在生产环境中，用户有时可以看到开发人员在加价中的评论。</li>
+<li>网站及相关技术配置不安全。例如，如果无法禁用调试和诊断功能，有时可能会为攻击者提供有用的工具，帮助他们获取敏感信息。默认配置也会使网站变得脆弱，例如，通过显示过于冗长的错误消息。</li>
+<li>应用程序的设计和行为缺陷。例如，如果网站在出现不同错误状态时返回不同的响应，这也可以允许攻击者列举敏感数据，例如有效的用户凭据。</li>
+</ul>
+<h2 id="漏洞危害"><a href="#漏洞危害" class="headerlink" title="漏洞危害"></a>漏洞危害</h2><ul>
+<li>扫描内网开放服务</li>
+<li>向内部任意主机的任意端口发送payload来攻击内网服务</li>
+<li>DOS攻击（请求大文件，始终保持连接Keep-Alive Always）</li>
+<li>攻击内网的web应用，例如直接SQL注入、XSS攻击等</li>
+<li>利用file、gopher、dict协议读取本地文件、执行命令等</li>
+</ul>
+<h2 id="测试方法"><a href="#测试方法" class="headerlink" title="测试方法"></a>测试方法</h2><h3 id="检测形式多样"><a href="#检测形式多样" class="headerlink" title="检测形式多样"></a>检测形式多样</h3><p>工具爬虫扫描得到敏感文件的路径，从而找到敏感数据，主要是还是通过关键词爆破。</p>
+<h3 id="手工挖掘"><a href="#手工挖掘" class="headerlink" title="手工挖掘"></a>手工挖掘</h3><p>根据web容器或者网页源代码的查看,Github，找到敏感信息。</p>
+<h3 id="操作系统版本"><a href="#操作系统版本" class="headerlink" title="操作系统版本"></a>操作系统版本</h3><p>可用nmap扫描得知</p>
+<h3 id="中间件的类型、版本"><a href="#中间件的类型、版本" class="headerlink" title="中间件的类型、版本"></a>中间件的类型、版本</h3><p>http返回头, 404报错页面, 使用工具（如whatweb）</p>
+<h3 id="Web敏感信息"><a href="#Web敏感信息" class="headerlink" title="Web敏感信息"></a>Web敏感信息</h3><ul>
+<li>phpinfo()信息泄露: <code>http://[ip]/test.php</code>，<code>http://[ip]/phpinfo.php</code></li>
+<li>测试网页泄露在外网: <code>test.cgi</code>、<code>phpinfo.php</code>、<code>info.php</code>等</li>
+<li>编辑器备份文件泄漏在外网: <code>http://[ip]/test.php.swp</code>、<code>http://[ip]/test.php.bak</code>、<code>http://[ip]/test.jsp.old</code>、<code>http://[ip]/cgi~</code></li>
+<li>版本管理工具（如git）文件信息泄露: <code>http://[ip]/.git/config</code>、<code>http://[ip]/CVS/Entriesp</code>、<code>http://[ip]/.svn/entriesp</code></li>
+<li>HTTP认证信息泄露: <code>http://[ip]/basic/index.php</code></li>
+<li>管理后台地址泄露: <code>http://[ip]/login.php</code>、<code>http://[ip]/admin.php</code>、<code>http://[ip]/manager.php</code>、 <code>http://[ip]/admin_login.php</code></li>
+</ul>
+<h2 id="防止敏感信息泄露"><a href="#防止敏感信息泄露" class="headerlink" title="防止敏感信息泄露"></a>防止敏感信息泄露</h2><p>在进行网站和系统维护时，请务必注意以下潜在风险和防范措施：</p>
+<h3 id="员工信息泄露"><a href="#员工信息泄露" class="headerlink" title="员工信息泄露"></a>员工信息泄露</h3><p>避免泄露员工邮箱和分机号码，这可能被恶意利用，例如社交工程攻击或生成字典攻击。</p>
+<h3 id="错误页面暴露信息"><a href="#错误页面暴露信息" class="headerlink" title="错误页面暴露信息"></a>错误页面暴露信息</h3><p>确保错误页面不暴露敏感信息，包括但不限于 MySQL 错误、PHP 错误、以及 CMS 版本等。</p>
+<h3 id="探针文件"><a href="#探针文件" class="headerlink" title="探针文件"></a>探针文件</h3><p>谨慎处理探针文件，如 robots.txt 和 phpMyAdmin，防止未授权访问。</p>
+<h3 id="网站源码备份文件"><a href="#网站源码备份文件" class="headerlink" title="网站源码备份文件"></a>网站源码备份文件</h3><p>避免将网站源码备份文件（如 .rar、.tar.gz、.zip）存放在可公开访问的位置，以免泄露敏感信息。</p>
+<h3 id="网络信息泄露"><a href="#网络信息泄露" class="headerlink" title="网络信息泄露"></a>网络信息泄露</h3><p>定期检查网络配置，防止 DNS 域传送漏洞、运维监控系统弱口令、网络拓扑泄露等问题。</p>
+<h3 id="第三方软件应用"><a href="#第三方软件应用" class="headerlink" title="第三方软件应用"></a>第三方软件应用</h3><p>审查 GitHub 上的源码，确保其中不包含敏感信息，防止数据库、邮箱密码泄露。</p>
+<h3 id="敏感信息搜集工具"><a href="#敏感信息搜集工具" class="headerlink" title="敏感信息搜集工具"></a>敏感信息搜集工具</h3><p>避免使用或谨慎使用搜集敏感信息的工具，包括但不限于 weakfilescan、BBScan、whatweb、dnsenum 等。</p>
+<h2 id="安全工具推荐"><a href="#安全工具推荐" class="headerlink" title="安全工具推荐"></a>安全工具推荐</h2><ul>
+<li><a href="https://github.com/ring04h/weakfilescan">weakfilescan</a></li>
+<li><a href="https://github.com/lijiejie/BBScan">BBScan</a></li>
+<li><a href="https://github.com/urbanadventurer/WhatWeb">whatweb</a></li>
+<li><a href="https://github.com/fwaeytens/dnsenum">dnsenum</a></li>
+<li><a href="https://github.com/">github</a></li>
+</ul>
+<p><strong>注意：在进行任何安全检查和调整时，请确保遵循合法合规的道德准则，以保护系统和用户的利益。</strong></p>
+<blockquote>
+<p>转载自<a href="https://cloud.tencent.com/developer/article/1969038">超详细敏感信息泄露漏洞总结</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>web安全</category>
+        <category>信息泄露</category>
+      </categories>
+      <tags>
+        <tag>web安全</tag>
+        <tag>信息泄露</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>搭建小记</title>
+    <url>/posts/53191.html</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
+<p>其实之前一直想用github搭一个了，无奈磕磕碰碰，遇点小困难就却难而退了，这几天在其他事情上也是这样，就换个地折腾一下。</p>
+</blockquote>
+<h3 id="感谢的大佬"><a href="#感谢的大佬" class="headerlink" title="感谢的大佬"></a>感谢的大佬</h3><ol>
+<li><a href="https://lin64850.github.io/">Eureka</a></li>
+<li><a href="https://space.bilibili.com/13282871">卷二兔</a></li>
+</ol>
+<h3 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h3><ol>
+<li><a href="https://hexo.io/zh-cn/docs/">Hexo</a></li>
+<li><a href="https://butterfly.js.org/posts/21cfbf15/">butterfly</a></li>
+</ol>
+<h3 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h3><ol>
+<li>安装Node.js</li>
+<li>安装Git <!--这个没想清楚作用--></li>
+<li>安装Hexo<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line">hexo init &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></li>
+<li>安装Hexo-theme-butterfly<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-theme-butterfly</span><br><span class="line">npm update hexo-theme-butterfly</span><br><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure></li>
+<li>配置_config.yml和_config.butterfly.yml文件</li>
+<li>实施部署<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>上面少了一块github的配置，就不说了哈哈</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h3><blockquote>
+<p>昨天一整天都不在状态(或许以后很长一段时间都这样哈哈，也没关系吧，速度调节，欧力给！)，晚上临时想着也不想做那件事(正在发愁的一件事，搭完之后还是要回归那件事的)，也就想折腾一下个人博客，看看视频，跟着上面两位大哥引荐与教学，很快可以搞定的，出版就这样，其实我还有一个其他博客的，但是要买服务器、域名啥的，之后过期就丢了哈哈！</p>
+</blockquote>
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><blockquote>
+<p>之后有空就玩玩这个，看看有没啥需要记录的。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>小记</tag>
+        <tag>搭建</tag>
       </tags>
   </entry>
 </search>
