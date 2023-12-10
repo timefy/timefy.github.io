@@ -347,7 +347,10 @@ $$\lnot e$$     <!-- logical NOT --></p>
 <p><img src="/img/blockchain_sec/2_1.jpg" alt="比特币网络概览"></p>
 <h3 id="区块的具体结构">区块的具体结构</h3>
 <p><img src="/img/blockchain_sec/2_2.jpg" alt="区块的具体结构"></p>
-<h3 id="区块难度计算">区块难度计算</h3>
+<h3 id="区块难度-目标值">区块难度/目标值</h3>
+<ol>
+<li><strong>区块计算公式</strong></li>
+</ol>
 <p>比特币的新目标值是由难度值决定的，难度值是一个指数形式的十六进制数。难度值的计算公式如下：</p>
 <p>$$<br>
 \text{target} = \text{coefficient} \times 2^{8 \times (\text{exponent} - 3)}<br>
@@ -367,6 +370,18 @@ $$</p>
 <p>$$<br>
 \text{预期时间} = 2016 \times 10 \text{分钟}<br>
 $$</p>
+<ol start="2">
+<li><strong>哈希目标值</strong><br>
+<img src="/img/blockchain_sec/2_3.jpg" alt="哈希目标值"></li>
+</ol>
+<h3 id="交易">交易</h3>
+<ol>
+<li>交易过程</li>
+</ol>
+<blockquote>
+<p>一个地址的UTXO（Unspent Transaction Output）数值不能被分割花费，除非通过交易由该UTXO生成多个新地址的UTXO。</p>
+</blockquote>
+<p><img src="/img/blockchain_sec/2_4.jpg" alt="哈希目标值"></p>
 ]]></content>
       <categories>
         <category>区块链</category>
@@ -559,6 +574,22 @@ $$</p>
       </tags>
   </entry>
   <entry>
+    <title>优化日记</title>
+    <url>/posts/ca1c84cd.html</url>
+    <content><![CDATA[<h3 id="准备优化下">准备优化下</h3>
+<blockquote>
+<p>2023-11-23 14:27今天先优化一点点</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>小记</tag>
+        <tag>优化</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>信息泄露</title>
     <url>/posts/76189c5e.html</url>
     <content><![CDATA[<h1>超详细敏感信息泄露漏洞总结</h1>
@@ -643,22 +674,6 @@ $$</p>
       <tags>
         <tag>web安全</tag>
         <tag>信息泄露</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>优化日记</title>
-    <url>/posts/ca1c84cd.html</url>
-    <content><![CDATA[<h3 id="准备优化下">准备优化下</h3>
-<blockquote>
-<p>2023-11-23 14:27今天先优化一点点</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>小记</tag>
-        <tag>优化</tag>
       </tags>
   </entry>
   <entry>
