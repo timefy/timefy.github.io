@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>MahtJax语法入门指南 | 水木时</title><meta name="author" content="水木时"><meta name="copyright" content="水木时"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="MathJax 是一个用于在网页上显示数学公式的 JavaScript 引擎。它支持多种数学表示法，包括 LaTeX、MathML 和 AsciiMath。以下是一些常见的 MathJax 语法示例：  行内数学公式（Inline Math）：使用单个美元符号 $ 来包围行内数学公式,如$E&#x3D;mc^2$.$E&#x3D;mc^2$.  块级数学公式（Display Math）： 使用双美元符号 $$ 来包围">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>MahtJax语法入门指南 | 水木时</title><meta name="author" content="水木时"><meta name="copyright" content="水木时"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="MathJax 是一个用于在网页上显示数学公式的 JavaScript 引擎。它支持多种数学表示法，包括 LaTeX、MathML 和 AsciiMath。以下是一些常见的 MathJax 语法示例：  行内数学公式（Inline Math）：使用单个美元符号 $ 来包围行内数学公式   如$E&#x3D;mc^2$. $E&#x3D;mc^2$.   块级数学公式（Display Math）： 使用双美元符号 $$">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MahtJax语法入门指南">
 <meta property="og:url" content="https://timefy.github.io/posts/2fa412f3.html">
 <meta property="og:site_name" content="水木时">
-<meta property="og:description" content="MathJax 是一个用于在网页上显示数学公式的 JavaScript 引擎。它支持多种数学表示法，包括 LaTeX、MathML 和 AsciiMath。以下是一些常见的 MathJax 语法示例：  行内数学公式（Inline Math）：使用单个美元符号 $ 来包围行内数学公式,如$E&#x3D;mc^2$.$E&#x3D;mc^2$.  块级数学公式（Display Math）： 使用双美元符号 $$ 来包围">
+<meta property="og:description" content="MathJax 是一个用于在网页上显示数学公式的 JavaScript 引擎。它支持多种数学表示法，包括 LaTeX、MathML 和 AsciiMath。以下是一些常见的 MathJax 语法示例：  行内数学公式（Inline Math）：使用单个美元符号 $ 来包围行内数学公式   如$E&#x3D;mc^2$. $E&#x3D;mc^2$.   块级数学公式（Display Math）： 使用双美元符号 $$">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://timefy.github.io/img/img/10.jpg">
 <meta property="article:published_time" content="2023-12-09T13:28:18.000Z">
-<meta property="article:modified_time" content="2023-12-11T00:57:26.890Z">
+<meta property="article:modified_time" content="2023-12-16T13:49:06.199Z">
 <meta property="article:author" content="水木时">
 <meta property="article:tag" content="工具">
 <meta property="article:tag" content="手册">
@@ -59,7 +59,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2023-12-11 08:57:26'
+  postUpdate: '2023-12-16 21:49:06'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -159,35 +159,463 @@
     })(window)</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
 <style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
   white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/img.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/web%E5%AE%89%E5%85%A8"><i class="fa-fw fas fa-shield-alt"></i><span> web安全</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE"><i class="fa-fw fas fa-cubes"></i><span> 区块链</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E9%98%85%E8%AF%BB"><i class="fa-fw fas fa-book"></i><span> 阅读</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background: transparent"><nav id="nav"><span id="blog-info"><a href="/" title="水木时"><span class="site-name">水木时</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/web%E5%AE%89%E5%85%A8"><i class="fa-fw fas fa-shield-alt"></i><span> web安全</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE"><i class="fa-fw fas fa-cubes"></i><span> 区块链</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E9%98%85%E8%AF%BB"><i class="fa-fw fas fa-book"></i><span> 阅读</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">MahtJax语法入门指南</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-12-09T13:28:18.000Z" title="发表于 2023-12-09 21:28:18">2023-12-09</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-12-11T00:57:26.890Z" title="更新于 2023-12-11 08:57:26">2023-12-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%89%8B%E5%86%8C/">手册</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">361</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>1分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="MahtJax语法入门指南"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>MathJax 是一个用于在网页上显示数学公式的 JavaScript 引擎。它支持多种数学表示法，包括 LaTeX、MathML 和 AsciiMath。以下是一些常见的 MathJax 语法示例：</p>
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/img.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/web%E5%AE%89%E5%85%A8"><i class="fa-fw fas fa-shield-alt"></i><span> web安全</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE"><i class="fa-fw fas fa-cubes"></i><span> 区块链</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E9%98%85%E8%AF%BB"><i class="fa-fw fas fa-book"></i><span> 阅读</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background: transparent"><nav id="nav"><span id="blog-info"><a href="/" title="水木时"><span class="site-name">水木时</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/web%E5%AE%89%E5%85%A8"><i class="fa-fw fas fa-shield-alt"></i><span> web安全</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE"><i class="fa-fw fas fa-cubes"></i><span> 区块链</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E9%98%85%E8%AF%BB"><i class="fa-fw fas fa-book"></i><span> 阅读</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">MahtJax语法入门指南</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-12-09T13:28:18.000Z" title="发表于 2023-12-09 21:28:18">2023-12-09</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-12-16T13:49:06.199Z" title="更新于 2023-12-16 21:49:06">2023-12-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%89%8B%E5%86%8C/">手册</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="MahtJax语法入门指南"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>MathJax 是一个用于在网页上显示数学公式的 JavaScript 引擎。它支持多种数学表示法，包括 LaTeX、MathML 和 AsciiMath。以下是一些常见的 MathJax 语法示例：</p>
 <ol>
-<li><p><strong>行内数学公式（Inline Math）</strong>：使用单个美元符号 <code>$</code> 来包围行内数学公式,如<code>$E=mc^2$</code>.<br>$E=mc^2$.</p>
-</li>
-<li><p><strong>块级数学公式（Display Math）</strong>： 使用双美元符号 <code>$$</code> 来包围块级数学公式,如<code>$$ F = G \frac&#123;m_1 m_2&#125;&#123;r^2&#125; $$</code>.<br>如下：</p>
-<script type="math/tex; mode=display">F = G \frac{m_1 m_2}{r^2}</script></li>
-<li><p><strong>上标和下标</strong>：使用 <code>^</code> 表示上标，使用 <code>_</code> 表示下标,如<code>$x^2$</code>、<code>$y_1$</code>.<br>$x^2$   <!-- x squared --><br>$y_1$   <!-- y sub 1 --></p>
-</li>
-<li><p><strong>分数</strong>： 使用 <code>\frac</code> 命令来创建分数,如<code>$\frac&#123;a&#125;&#123;b&#125;$</code>.<br>$\frac{a}{b}$   <!-- a over b --></p>
-</li>
-<li><p><strong>根号</strong>： 使用 <code>\sqrt</code> 命令来创建根号,如<code>$\sqrt&#123;2&#125;$</code>.<br>$\sqrt{2}$   <!-- square root of 2 --></p>
-</li>
-<li><p><strong>希腊字母</strong>：使用 <code>\</code> 后跟希腊字母名称来插入希腊字母,如<code>$\alpha$</code>、<code>$\beta$</code>、<code>$\gamma$</code>.<br>$\alpha$, $\beta$, $\gamma$   <!-- alpha, beta, gamma --></p>
-</li>
+<li><strong>行内数学公式（Inline Math）</strong>：使用单个美元符号 <code>$</code> 来包围行内数学公式</li>
 </ol>
-<ol>
-<li><p><strong>求和、积分</strong>：使用 <code>\sum</code> 和 <code>\int</code> 命令来表示求和和积分,如<code>$$\sum_&#123;i=1&#125;^&#123;n&#125; i$$</code>、<code>$$\int_&#123;0&#125;^&#123;\infty&#125; f(x) \, dx$$</code>.<br>$\sum<em>{i=1}^{n} i$   <!-- sum from i=1 to n of i --><br>$\int</em>{0}^{\infty} f(x) \, dx$   <!-- integral from 0 to infinity of f(x) with respect to x --></p>
-</li>
-<li><p><strong>矩阵</strong>：使用 <code>matrix</code> 环境创建矩阵,如<code>$$\begin&#123;matrix&#125; 1 &amp; 2 \\ 3 &amp; 4 \end&#123;matrix&#125;$$</code>.</p>
-</li>
+<ul>
+<li>如<code>$E=mc^2$</code>.</li>
+<li>$E=mc^2$.</li>
+</ul>
+<ol start="2">
+<li><strong>块级数学公式（Display Math）</strong>： 使用双美元符号 <code>$$</code> 来包围块级数学公式</li>
 </ol>
-<p><script type="math/tex">\begin{matrix} 1 & 2 \\ 3 & 4 \end{matrix}</script>   <!-- 2x2 matrix --></p>
-<ol>
-<li><p>矢量：使用 \vec 命令来表示矢量,如<code>$\vec&#123;v&#125;$</code>.<br>$\vec{v}$   <!-- vector v --></p>
-</li>
-<li><p>逻辑运算符：使用相应的 LaTeX 命令表示逻辑运算符,如<code>$a \land b$</code>、<code>$a \land b$</code>、<code>$\lnot e$</code>.<br>$a \land b$   <!-- logical AND --><br>$c \lor d$    <!-- logical OR --><br>$\lnot e$     <!-- logical NOT --></p>
-</li>
+<ul>
+<li>如<code>$$ F = G \frac&#123;m_1 m_2&#125;&#123;r^2&#125; $$</code>.<br>
+如下</li>
+<li>$$ F = G \frac{m_1 m_2}{r^2} $$</li>
+</ul>
+<ol start="3">
+<li><strong>上标和下标</strong>：使用 <code>^</code> 表示上标，使用 <code>_</code> 表示下标</li>
 </ol>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://timefy.github.io">水木时</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://timefy.github.io/posts/2fa412f3.html">https://timefy.github.io/posts/2fa412f3.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://timefy.github.io" target="_blank">水木时</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%B7%A5%E5%85%B7/">工具</a><a class="post-meta__tags" href="/tags/%E6%89%8B%E5%86%8C/">手册</a><a class="post-meta__tags" href="/tags/%E6%8C%87%E5%8D%97/">指南</a><a class="post-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">学习记录</a></div><div class="post_share"><div class="social-share" data-image="/img/img/10.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/posts/d9c2fff.html" title="《可塑的我：自我发展心理学的35堂必修课》_陈婕君"><img class="cover" src="/img/img/9.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">《可塑的我：自我发展心理学的35堂必修课》_陈婕君</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/665ba237.html" title="《区块链安全》_翁健"><img class="cover" src="/img/img/6.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-05</div><div class="title">《区块链安全》_翁健</div></div></a></div><div><a href="/posts/776f3c45.html" title="隐私保护相关"><img class="cover" src="/img/img/7.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-06</div><div class="title">隐私保护相关</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/img.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">水木时</div><div class="author-info__description">以其德，悟其道</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/timefy"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">以德立身，融道于行</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/2fa412f3.html" title="MahtJax语法入门指南"><img src="/img/img/10.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MahtJax语法入门指南"/></a><div class="content"><a class="title" href="/posts/2fa412f3.html" title="MahtJax语法入门指南">MahtJax语法入门指南</a><time datetime="2023-12-09T13:28:18.000Z" title="发表于 2023-12-09 21:28:18">2023-12-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/d9c2fff.html" title="《可塑的我：自我发展心理学的35堂必修课》_陈婕君"><img src="/img/img/9.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《可塑的我：自我发展心理学的35堂必修课》_陈婕君"/></a><div class="content"><a class="title" href="/posts/d9c2fff.html" title="《可塑的我：自我发展心理学的35堂必修课》_陈婕君">《可塑的我：自我发展心理学的35堂必修课》_陈婕君</a><time datetime="2023-12-09T11:20:29.000Z" title="发表于 2023-12-09 19:20:29">2023-12-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/64e2ab84.html" title="《启发》_罗振宇"><img src="/img/img/8.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《启发》_罗振宇"/></a><div class="content"><a class="title" href="/posts/64e2ab84.html" title="《启发》_罗振宇">《启发》_罗振宇</a><time datetime="2023-12-08T07:20:00.000Z" title="发表于 2023-12-08 15:20:00">2023-12-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/776f3c45.html" title="隐私保护相关"><img src="/img/img/7.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="隐私保护相关"/></a><div class="content"><a class="title" href="/posts/776f3c45.html" title="隐私保护相关">隐私保护相关</a><time datetime="2023-12-06T11:31:23.000Z" title="发表于 2023-12-06 19:31:23">2023-12-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/665ba237.html" title="《区块链安全》_翁健"><img src="/img/img/6.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《区块链安全》_翁健"/></a><div class="content"><a class="title" href="/posts/665ba237.html" title="《区块链安全》_翁健">《区块链安全》_翁健</a><time datetime="2023-12-05T09:16:13.000Z" title="发表于 2023-12-05 17:16:13">2023-12-05</time></div></div></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="copyright">&copy;2023 By 水木时</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script>function panguFn () {
+<ul>
+<li>如<code>$x^2$</code>、<code>$y_1$</code>.</li>
+<li>$x^2$   、<!-- x squared -->$y_1$   <!-- y sub 1 --></li>
+</ul>
+<ol start="4">
+<li><strong>分数</strong>： 使用 <code>\frac</code> 命令来创建分数</li>
+</ol>
+<ul>
+<li>如<code>$\frac&#123;a&#125;&#123;b&#125;$</code>.</li>
+<li>$\frac{a}{b}$   <!-- a over b --></li>
+</ul>
+<ol start="5">
+<li><strong>根号</strong>： 使用 <code>\sqrt</code> 命令来创建根号</li>
+</ol>
+<ul>
+<li>如<code>$\sqrt&#123;2&#125;$</code>.</li>
+<li>$\sqrt{2}$   <!-- square root of 2 --></li>
+</ul>
+<ol start="6">
+<li><strong>希腊字母</strong>：使用 <code>\</code> 后跟希腊字母名称来插入希腊字母</li>
+</ol>
+<ul>
+<li>如<code>$\alpha$</code>、<code>$\beta$</code>、<code>$\gamma$</code>.</li>
+<li>$\alpha$, $\beta$, $\gamma$   <!-- alpha, beta, gamma --></li>
+</ul>
+<ol start="7">
+<li><strong>求和、积分</strong>：使用 <code>\sum</code> 和 <code>\int</code> 命令来表示求和和积分</li>
+</ol>
+<ul>
+<li>如<code>$$\sum_&#123;i=1&#125;^&#123;n&#125; i$$</code>、<code>$$\int_&#123;0&#125;^&#123;\infty&#125; f(x) \, dx$$</code>.</li>
+<li>$\sum_{i=1}^{n} i$   <!-- sum from i=1 to n of i -->、$\int_{0}^{\infty} f(x) , dx$   <!-- integral from 0 to infinity of f(x) with respect to x --></li>
+</ul>
+<ol start="8">
+<li><strong>矩阵</strong>：使用 <code>matrix</code> 环境创建矩阵,起始标记<code>\begin&#123;matrix&#125;</code> ，结束标记 <code>\end&#123;matrix&#125;</code>,每一行末尾标记 <code>\\</code> ，行间元素以 <code>&amp;</code> 分割。</li>
+</ol>
+<ul>
+<li>如<code>$$\begin&#123;matrix&#125; 1 &amp; 2 \\ 3 &amp; 4 \end&#123;matrix&#125;$$</code>.</li>
+</ul>
+<p>$$<br>
+\begin{matrix}<br>
+1&amp;2\\<br>
+3&amp;4\\<br>
+\end{matrix}<br>
+$$   <!-- 2x2 matrix --></p>
+<blockquote>
+<p>这里要注意的是，由于 博客 Markdown 语法与 MathJax 存在冲突，<code>\\</code> 实际上被转义成了单个 <code>\</code> ，这导致最终博客将矩阵显示成一行，所以实际上在写博客时凡是涉及 <code>\\</code> 都要写成 <code>\\\\</code> 。</p>
+</blockquote>
+<ul>
+<li><strong>矩阵边框</strong><br>
+在起始、结束标记处用下列词替换 matrix</li>
+</ul>
+<p><code>pmatrix</code> ：小括号边框<br>
+<code>bmatrix</code> ：中括号边框<br>
+<code>Bmatrix</code> ：大括号边框<br>
+<code>vmatrix</code> ：单竖线边框<br>
+<code>Vmatrix</code> ：双竖线边框</p>
+<ul>
+<li><strong>省略元素</strong>
+<ul>
+<li>横省略号：<code>\cdots</code></li>
+<li>竖省略号：<code>\vdots</code></li>
+<li>斜省略号：<code>\ddots</code></li>
+</ul>
+</li>
+</ul>
+<ol start="9">
+<li><strong>矢量</strong>：使用 \vec 命令来表示矢量</li>
+</ol>
+<ul>
+<li>如<code>$\vec&#123;v&#125;$</code>.</li>
+<li>$\vec{v}$   <!-- vector v --></li>
+</ul>
+<ol start="10">
+<li><strong>逻辑运算符</strong>：使用相应的 LaTeX 命令表示逻辑运算符</li>
+</ol>
+<ul>
+<li>如<code>$a \land b$</code>、<code>$a \land b$</code>、<code>$\lnot e$</code>.</li>
+<li>$a \land b$   <!-- logical AND -->、$c \lor d$    <!-- logical OR -->、 $\lnot e$     <!-- logical NOT --></li>
+</ul>
+<ol start="11">
+<li><strong>希腊字母</strong></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>希腊字母</th>
+<th>Mathjax命令</th>
+<th>希腊字母</th>
+<th>Mathjax命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\alpha$</td>
+<td><code>$\alpha$</code></td>
+<td>$\beta$</td>
+<td><code>$\beta$</code></td>
+</tr>
+<tr>
+<td>$\gamma$</td>
+<td><code>$\gamma$</code></td>
+<td>$\delta$</td>
+<td><code>$\delta$</code></td>
+</tr>
+<tr>
+<td>$\epsilon$</td>
+<td><code>$\epsilon$</code></td>
+<td>$\zeta$</td>
+<td><code>$\zeta$</code></td>
+</tr>
+<tr>
+<td>$\eta$</td>
+<td><code>$\eta$</code></td>
+<td>$\theta$</td>
+<td><code>$\theta$</code></td>
+</tr>
+<tr>
+<td>$\iota$</td>
+<td><code>$\iota$</code></td>
+<td>$\kappa$</td>
+<td><code>$\kappa$</code></td>
+</tr>
+<tr>
+<td>$\lambda$</td>
+<td><code>$\lambda$</code></td>
+<td>$\mu$</td>
+<td><code>$\mu$</code></td>
+</tr>
+<tr>
+<td>$\nu$</td>
+<td><code>$\nu$</code></td>
+<td>$\xi$</td>
+<td><code>$\xi$</code></td>
+</tr>
+<tr>
+<td>$\pi$</td>
+<td><code>$\pi$</code></td>
+<td>$\rho$</td>
+<td><code>$\rho$</code></td>
+</tr>
+<tr>
+<td>$\sigma$</td>
+<td><code>$\sigma$</code></td>
+<td>$\tau$</td>
+<td><code>$\tau$</code></td>
+</tr>
+<tr>
+<td>$\upsilon$</td>
+<td><code>$\upsilon$</code></td>
+<td>$\phi$</td>
+<td><code>$\phi$</code></td>
+</tr>
+<tr>
+<td>$\chi$</td>
+<td><code>$\chi$</code></td>
+<td>$\psi$</td>
+<td><code>$\psi$</code></td>
+</tr>
+<tr>
+<td>$\omega$</td>
+<td><code>$\omega$</code></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ol start="12">
+<li><strong>关系运算符</strong></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>数学符号</th>
+<th>Mathjax命令</th>
+<th>数学符号</th>
+<th>Mathjax命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\mid$</td>
+<td><code>$\mid$</code></td>
+<td>$\nmid$</td>
+<td><code>$\nmid$</code></td>
+</tr>
+<tr>
+<td>$\cdot$</td>
+<td><code>$\cdot$</code></td>
+<td>$\leq$</td>
+<td><code>$\leq$</code></td>
+</tr>
+<tr>
+<td>$\geq$</td>
+<td><code>$\geq$</code></td>
+<td>$\neq$</td>
+<td><code>$\neq$</code></td>
+</tr>
+<tr>
+<td>$\approx$</td>
+<td><code>$\approx$</code></td>
+<td>$\equiv$</td>
+<td><code>$\equiv$</code></td>
+</tr>
+<tr>
+<td>$\prec$</td>
+<td><code>$\prec$</code></td>
+<td>$\preceq$</td>
+<td><code>$\preceq$</code></td>
+</tr>
+<tr>
+<td>$\ll$</td>
+<td><code>$\ll$</code></td>
+<td>$\succ$</td>
+<td><code>$\succ$</code></td>
+</tr>
+<tr>
+<td>$\succeq$</td>
+<td><code>$\succeq$</code></td>
+<td>$\gg$</td>
+<td><code>$\gg$</code></td>
+</tr>
+<tr>
+<td>$\sim$</td>
+<td><code>$\sim$</code></td>
+<td>$\simeq$</td>
+<td><code>$\simeq$</code></td>
+</tr>
+<tr>
+<td>$\asymp$</td>
+<td><code>$\asymp$</code></td>
+<td>$\cong$</td>
+<td><code>$\cong$</code></td>
+</tr>
+<tr>
+<td>$\doteq$</td>
+<td><code>$\doteq$</code></td>
+<td>$\propto$</td>
+<td><code>$\propto$</code></td>
+</tr>
+<tr>
+<td>$\models$</td>
+<td><code>$\models$</code></td>
+<td>$\parallel$</td>
+<td><code>$\parallel$</code></td>
+</tr>
+<tr>
+<td>$\bowtie$</td>
+<td><code>$\bowtie$</code></td>
+<td>$\perp$</td>
+<td><code>$\perp$</code></td>
+</tr>
+<tr>
+<td>$\circ$</td>
+<td><code>$\circ$</code></td>
+<td>$\ast$</td>
+<td><code>$\ast$</code></td>
+</tr>
+<tr>
+<td>$\bigodot$</td>
+<td><code>$\bigodot$</code></td>
+<td>$\bigotimes$</td>
+<td><code>$\bigotimes$</code></td>
+</tr>
+<tr>
+<td>$\bigoplus$</td>
+<td><code>$\bigoplus$</code></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ol start="13">
+<li><strong>算术运算符</strong></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>数学符号</th>
+<th>Mathjax命令</th>
+<th>数学符号</th>
+<th>Mathjax命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\pm$</td>
+<td><code>$\pm$</code></td>
+<td>$\mp$</td>
+<td><code>$\mp$</code></td>
+</tr>
+<tr>
+<td>$\times$</td>
+<td><code>$\times$</code></td>
+<td>$\ast$</td>
+<td><code>$\ast$</code></td>
+</tr>
+<tr>
+<td>$\star$</td>
+<td><code>$\star$</code></td>
+<td>$\circ$</td>
+<td><code>$\circ$</code></td>
+</tr>
+<tr>
+<td>$\bullet$</td>
+<td><code>$\bullet$</code></td>
+<td>$\cdot$</td>
+<td><code>$\cdot$</code></td>
+</tr>
+<tr>
+<td>$\div$</td>
+<td><code>$\div$</code></td>
+<td>$\sum$</td>
+<td><code>$\sum$</code></td>
+</tr>
+<tr>
+<td>$\prod$</td>
+<td><code>$\prod$</code></td>
+<td>$\coprod$</td>
+<td><code>$\coprod$</code></td>
+</tr>
+<tr>
+<td>$\oplus$</td>
+<td><code>$\oplus$</code></td>
+<td>$\bigoplus$</td>
+<td><code>$\bigoplus$</code></td>
+</tr>
+<tr>
+<td>$\bigotimes$</td>
+<td><code>$\bigotimes$</code></td>
+<td>$\oslash$</td>
+<td><code>$\oslash$</code></td>
+</tr>
+<tr>
+<td>$\odot$</td>
+<td><code>$\odot$</code></td>
+<td>$\bigodot$</td>
+<td><code>$\bigodot$</code></td>
+</tr>
+<tr>
+<td>$\diamond$</td>
+<td><code>$\diamond$</code></td>
+<td>$\bigtriangleup$</td>
+<td><code>$\bigtriangleup$</code></td>
+</tr>
+<tr>
+<td>$\bigtriangledown$</td>
+<td><code>$\bigtriangledown$</code></td>
+<td>$\triangleleft$</td>
+<td><code>$\triangleleft$</code></td>
+</tr>
+<tr>
+<td>$\triangleright$</td>
+<td><code>$\triangleright$</code></td>
+<td>$\bigcirc$</td>
+<td><code>$\bigcirc$</code></td>
+</tr>
+</tbody>
+</table>
+<ol start="14">
+<li><strong>字体</strong></li>
+</ol>
+<ul>
+<li>打印机字体 Typewriter：<code>$\mathtt&#123;A&#125;$</code> 显示为 $\mathtt{A}$</li>
+<li>黑板粗体字 Blackboard Bold：<code>$\mathbb&#123;A&#125;$</code> 显示为 $\mathbb{A}$</li>
+<li>无衬线字体 Sans Serif：<code>$\mathsf&#123;A&#125;$</code> 显示为 $\mathsf{A}$</li>
+<li>手写体：<code>$\mathscr&#123;A&#125;$</code> 显示为 $\mathscr{A}$</li>
+<li>罗马字体：<code>$\mathrm&#123;A&#125;$</code> 显示为 $\mathrm{A}$</li>
+</ul>
+<ol start="15">
+<li><strong>括号</strong></li>
+</ol>
+<ul>
+<li>小括号： <code>$()$</code> ，显示为 $()$</li>
+<li>中括号：<code>$[]$</code> ，显示为 $[]$</li>
+<li>尖括号：<code>$\langle$</code> 和 <code>$\rangle$</code>，显示为 $\langle$ 和 $\rangle$</li>
+<li>大括号：<code>$\lbrace$</code>和 <code>$\rbrace$</code>，显示为$\lbrace$ 和 $\rbrace$ 。<code>\&#123;</code> 和 <code>\&#125;</code> 也可以使用，但推荐前一种，后一种无法被 Hexo 博客显示。</li>
+</ul>
+<ol start="16">
+<li><strong>求和、极限与积分</strong></li>
+</ol>
+<ul>
+<li>求和：<code>$\sum$</code>
+<ul>
+<li><code>$\sum_&#123;i=1&#125;^n&#123;a_i&#125;$</code> 显示为 $\sum_{i=1}^n{a_i}$</li>
+</ul>
+</li>
+<li>极限：<code>$\lim$</code>
+<ul>
+<li><code>$\lim_&#123;x\to 0&#125;$</code> 显示为 $\lim_{x\to 0}$</li>
+</ul>
+</li>
+<li>积分：<code>$\int$</code>
+<ul>
+<li><code>$\int_0^xf(x)\text&#123;d&#125;x$</code> 显示为 $\int_0^xf(x)\text{d}x$</li>
+</ul>
+</li>
+</ul>
+<ol start="17">
+<li><strong>特殊函数</strong></li>
+</ol>
+<ul>
+<li><code>$\函数名$</code>
+<ul>
+<li><code>$\sin x$</code> ，<code>$\ln x$</code> ，<code>$\max(A, B, C)$</code> 显示为 $\sin x$ ，$\ln x$ ，$\max(A, B, C)$</li>
+</ul>
+</li>
+</ul>
+<ol start="18">
+<li><strong>空格</strong><br>
+LaTeX 语法会忽略空格，需要使用转义字符 <code>\</code></li>
+</ol>
+<ul>
+<li>小空格 <code>$a\ b$</code> 显示为 $a\ b$</li>
+<li>四个空格：<code>$a\quad b$</code> 显示为 $a\quad b$</li>
+</ul>
+<ol start="19">
+<li>方程组</li>
+</ol>
+<ul>
+<li>起始以 <code>\begin&#123;cases&#125;</code> 声明，结束以 <code>\end&#123;cases&#125;</code> 声明</li>
+<li>如<code>$$ \begin&#123;cases&#125; a_1x+b_1y+c_1z=d_1\\ a_2x+b_2y+c_2z=d_2\\ a_3x+b_3y+c_3z=d_3\\ \end&#123;cases&#125; $$</code></li>
+</ul>
+<p>$$<br>
+\begin{cases}<br>
+a_1x+b_1y+c_1z=d_1\<br>
+a_2x+b_2y+c_2z=d_2\<br>
+a_3x+b_3y+c_3z=d_3\<br>
+\end{cases}<br>
+$$</p>
+<ol start="20">
+<li>公式编号</li>
+</ol>
+<ul>
+<li>用 <code>\tag&#123;n&#125;</code> 标签</li>
+<li>举例：<code>$$f(x)=x\tag&#123;1&#125;$$</code> 显示为<br>
+$$f(x)=x\tag{1}$$</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://timefy.github.io">水木时</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://timefy.github.io/posts/2fa412f3.html">https://timefy.github.io/posts/2fa412f3.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://timefy.github.io" target="_blank">水木时</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%B7%A5%E5%85%B7/">工具</a><a class="post-meta__tags" href="/tags/%E6%89%8B%E5%86%8C/">手册</a><a class="post-meta__tags" href="/tags/%E6%8C%87%E5%8D%97/">指南</a><a class="post-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">学习记录</a></div><div class="post_share"><div class="social-share" data-image="/img/img/10.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/79b9413.html" title="数学符号参考"><img class="cover" src="/img/img/11.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">数学符号参考</div></div></a></div><div class="next-post pull-right"><a href="/posts/d9c2fff.html" title="《可塑的我：自我发展心理学的35堂必修课》_陈婕君"><img class="cover" src="/img/img/9.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">《可塑的我：自我发展心理学的35堂必修课》_陈婕君</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/79b9413.html" title="数学符号参考"><img class="cover" src="/img/img/11.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-16</div><div class="title">数学符号参考</div></div></a></div><div><a href="/posts/665ba237.html" title="《区块链安全》_翁健"><img class="cover" src="/img/img/6.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-05</div><div class="title">《区块链安全》_翁健</div></div></a></div><div><a href="/posts/776f3c45.html" title="隐私保护相关"><img class="cover" src="/img/img/7.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-06</div><div class="title">隐私保护相关</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/img.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">水木时</div><div class="author-info__description">以其德，悟其道</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/timefy"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">以德立身，融道于行</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/79b9413.html" title="数学符号参考"><img src="/img/img/11.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数学符号参考"/></a><div class="content"><a class="title" href="/posts/79b9413.html" title="数学符号参考">数学符号参考</a><time datetime="2023-12-16T11:49:27.000Z" title="发表于 2023-12-16 19:49:27">2023-12-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/2fa412f3.html" title="MahtJax语法入门指南"><img src="/img/img/10.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MahtJax语法入门指南"/></a><div class="content"><a class="title" href="/posts/2fa412f3.html" title="MahtJax语法入门指南">MahtJax语法入门指南</a><time datetime="2023-12-09T13:28:18.000Z" title="发表于 2023-12-09 21:28:18">2023-12-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/d9c2fff.html" title="《可塑的我：自我发展心理学的35堂必修课》_陈婕君"><img src="/img/img/9.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《可塑的我：自我发展心理学的35堂必修课》_陈婕君"/></a><div class="content"><a class="title" href="/posts/d9c2fff.html" title="《可塑的我：自我发展心理学的35堂必修课》_陈婕君">《可塑的我：自我发展心理学的35堂必修课》_陈婕君</a><time datetime="2023-12-09T11:20:29.000Z" title="发表于 2023-12-09 19:20:29">2023-12-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/64e2ab84.html" title="《启发》_罗振宇"><img src="/img/img/8.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《启发》_罗振宇"/></a><div class="content"><a class="title" href="/posts/64e2ab84.html" title="《启发》_罗振宇">《启发》_罗振宇</a><time datetime="2023-12-08T07:20:00.000Z" title="发表于 2023-12-08 15:20:00">2023-12-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/776f3c45.html" title="隐私保护相关"><img src="/img/img/7.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="隐私保护相关"/></a><div class="content"><a class="title" href="/posts/776f3c45.html" title="隐私保护相关">隐私保护相关</a><time datetime="2023-12-06T11:31:23.000Z" title="发表于 2023-12-06 19:31:23">2023-12-06</time></div></div></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="copyright">&copy;2023 By 水木时</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script>function panguFn () {
   if (typeof pangu === 'object') pangu.autoSpacingPage()
   else {
     getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
