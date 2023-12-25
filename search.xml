@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>MahtJax语法入门指南</title>
+    <title>MathJax语法入门指南</title>
     <url>/posts/2fa412f3.html</url>
     <content><![CDATA[<p>MathJax 是一个用于在网页上显示数学公式的 JavaScript 引擎。它支持多种数学表示法，包括 LaTeX、MathML 和 AsciiMath。以下是一些常见的 MathJax 语法示例：</p>
 <ol>
@@ -468,6 +468,145 @@ $$f(x)=x\tag{1}$$</li>
         <tag>手册</tag>
         <tag>指南</tag>
         <tag>学习记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《用概率思维提高胜算》_刘润</title>
+    <url>/posts/6cfa7377.html</url>
+    <content><![CDATA[<blockquote>
+<p><strong>序言</strong></p>
+<ol>
+<li>人生算法<br>
+把同样公正的机会，放在很多人面前，不同的人生算法，会导致全然不同的选择。</li>
+<li>确定效应<br>
+两个选择，100%拿到100万和50%拿到5000万，你会怎么选？</li>
+<li>概率思维<br>
+是这个时代成功者所秉持的底层思维</li>
+</ol>
+</blockquote>
+<h1>PART ONE 1 定准方向 把握人生的精度</h1>
+<h2 id="成为高手的三个阶段">成为高手的三个阶段</h2>
+<h3 id="判断力">判断力</h3>
+<ul>
+<li>不是指你有没有优秀的“决策模型”，而是在你只有20%-30%信息量的时候，如何做出大概率正确的决定</li>
+<li>是信息量的对冲</li>
+</ul>
+<h3 id="分寸感">分寸感</h3>
+<ul>
+<li>是复杂性的对冲</li>
+</ul>
+<h3 id="颗粒度">颗粒度</h3>
+<ul>
+<li>是对分辨率的对冲</li>
+</ul>
+<h2 id="让复杂的事情简单化">让复杂的事情简单化</h2>
+<h3 id="目标和指标">目标和指标</h3>
+<ul>
+<li>
+<p>我们要懂得为目标找到指标</p>
+<ul>
+<li>持续健康经营是企业经营目标</li>
+<li>人均利润是指标</li>
+</ul>
+</li>
+<li>
+<p>不要因为关注指标，而忘了目标</p>
+</li>
+</ul>
+<h3 id="回归本质">回归本质</h3>
+<p><img src="/img/probability_mind/1.jpg" alt=""></p>
+<ul>
+<li>在变革时代，更需回归行业本质，尊重常识和规律。</li>
+<li>从满足用户需求出发，把复杂事情简单化</li>
+<li>只有简单，才能专注。只有专注，才能做到极致。简单，才是终极智慧。</li>
+</ul>
+<h3 id="熟人关系">熟人关系</h3>
+<ul>
+<li>真正厉害的人，都很简单</li>
+<li><strong>能把复杂问题简单化，才是一流大智慧。</strong></li>
+</ul>
+<h2 id="知识增量，决定你的成长质量">知识增量，决定你的成长质量</h2>
+<h3 id="世界上的两种知识">世界上的两种知识</h3>
+<ul>
+<li>
+<p>看书的两个误区</p>
+<ul>
+<li>把看书过分神圣化，别让形式大于你的目的</li>
+<li>看书不仅仅是为了获得已知，更是获得认知</li>
+</ul>
+</li>
+<li>
+<p>一种是把未知变成已知</p>
+<ul>
+<li>充满探索精神的科学家、思想家</li>
+</ul>
+</li>
+<li>
+<p>第二种是把已知变成认知</p>
+<ul>
+<li>不仅是为了知道，更是为了认知</li>
+<li><strong>明白是什么，还要知道为什么、怎么用，只有这样，才是有效的知识增量</strong></li>
+</ul>
+</li>
+</ul>
+<p><img src="/img/probability_mind/2.jpg" alt=""></p>
+<h3 id="高效学习的四种途径">高效学习的四种途径</h3>
+<h4 id="认知之树-须鲸式学习">认知之树+须鲸式学习</h4>
+<ul>
+<li>认知之树：要有自己的知识框架<br>
+<img src="/img/probability_mind/3.jpg" alt=""></li>
+<li>须鲸式学习：先大量输入，接着把有用的知识，挂在你的认知之树<br>
+<img src="/img/probability_mind/4.jpg" alt=""></li>
+</ul>
+<h4 id="大量听书">大量听书</h4>
+<ul>
+<li>好处：短时间内快速了解一个领域的全貌，获得60%-70%的核心认知。</li>
+<li>对打地基很有帮助，还能很好地开阔自己的视野</li>
+<li>偶遇陌生的知识，迅速扩展知识面，完善知识结构</li>
+</ul>
+<h4 id="集中阅读">集中阅读</h4>
+<ul>
+<li>听到特别好的书，想深入了解就仔细阅读</li>
+<li>阅读，是做更认真的研究，吃透一个领域</li>
+<li>如何阅读
+<ul>
+<li>先看目录</li>
+<li>然后，找到what、why、how</li>
+<li>先读书，然后读人<br>
+<img src="/img/probability_mind/5.jpg" alt=""></li>
+</ul>
+</li>
+</ul>
+<h4 id="输出是最好的输入">输出是最好的输入</h4>
+<p><img src="/img/probability_mind/7.jpg" alt=""></p>
+<h3 id="坚持，造成人与人之间的差距">坚持，造成人与人之间的差距</h3>
+<ul>
+<li>
+<p>用他律来自律，加入一个学习小组</p>
+<ul>
+<li>大家规定，每天输出，做到奖励，做不到惩罚</li>
+<li>互相监督，互相鼓励</li>
+</ul>
+</li>
+<li>
+<p>充分利用碎片化的时间</p>
+<ul>
+<li>不要浪费第三个8小时</li>
+<li>充分利用碎片化时间学习，积少成多，非常可观。<br>
+<img src="/img/probability_mind/8.jpg" alt=""></li>
+</ul>
+</li>
+<li>
+<p>结语：大量输入，大量输出，量变引起质变。</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>阅读</category>
+      </categories>
+      <tags>
+        <tag>二课</tag>
+        <tag>阅读</tag>
       </tags>
   </entry>
   <entry>
@@ -1466,70 +1605,6 @@ Alice 要将一份签名的消息发送给 Bob,为了保证通信的安全性,�
       </tags>
   </entry>
   <entry>
-    <title>《用概率思维提高胜算》_刘润</title>
-    <url>/posts/6cfa7377.html</url>
-    <content><![CDATA[<blockquote>
-<p><strong>序言</strong></p>
-<ol>
-<li>人生算法<br>
-把同样公正的机会，放在很多人面前，不同的人生算法，会导致全然不同的选择。</li>
-<li>确定效应<br>
-两个选择，100%拿到100万和50%拿到5000万，你会怎么选？</li>
-<li>概率思维<br>
-是这个时代成功者所秉持的底层思维</li>
-</ol>
-</blockquote>
-<h1>PART ONE 1 定准方向 把握人生的精度</h1>
-<h2 id="成为高手的三个阶段">成为高手的三个阶段</h2>
-<h3 id="判断力">判断力</h3>
-<ul>
-<li>不是指你有没有优秀的“决策模型”，而是在你只有20%-30%信息量的时候，如何做出大概率正确的决定</li>
-<li>是信息量的对冲</li>
-</ul>
-<h3 id="分寸感">分寸感</h3>
-<ul>
-<li>是复杂性的对冲</li>
-</ul>
-<h3 id="颗粒度">颗粒度</h3>
-<ul>
-<li>是对分辨率的对冲</li>
-</ul>
-<h2 id="让复杂的事情简单化">让复杂的事情简单化</h2>
-<h3 id="目标和指标">目标和指标</h3>
-<ul>
-<li>
-<p>我们要懂得为目标找到指标</p>
-<ol>
-<li>持续健康经营是企业经营目标</li>
-<li>人均利润是指标</li>
-</ol>
-</li>
-<li>
-<p>不要因为关注指标，而忘了目标</p>
-</li>
-</ul>
-<h3 id="回归本质">回归本质</h3>
-<p><img src="/img/probability_mind/1_1.jpg" alt=""></p>
-<ul>
-<li>在变革时代，更需回归行业本质，尊重常识和规律。</li>
-<li>从满足用户需求出发，把复杂事情简单化</li>
-<li>只有简单，才能专注。只有专注，才能做到极致。简单，才是终极智慧。</li>
-</ul>
-<h3 id="熟人关系">熟人关系</h3>
-<ul>
-<li>真正厉害的人，都很简单</li>
-<li><strong>能把复杂问题简单化，才是一流大智慧。</strong></li>
-</ul>
-]]></content>
-      <categories>
-        <category>阅读</category>
-      </categories>
-      <tags>
-        <tag>二课</tag>
-        <tag>阅读</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>优化日记</title>
     <url>/posts/ca1c84cd.html</url>
     <content><![CDATA[<h3 id="准备优化下">准备优化下</h3>
@@ -1543,59 +1618,6 @@ Alice 要将一份签名的消息发送给 Bob,为了保证通信的安全性,�
       <tags>
         <tag>小记</tag>
         <tag>优化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>搭建小记</title>
-    <url>/posts/53191.html</url>
-    <content><![CDATA[<h3 id="前言">前言</h3>
-<blockquote>
-<p>其实之前一直想用github搭一个了，无奈磕磕碰碰，遇点小困难就却难而退了，这几天在其他事情上也是这样，就换个地折腾一下。</p>
-</blockquote>
-<h3 id="感谢的大佬">感谢的大佬</h3>
-<ol>
-<li><a href="https://lin64850.github.io/">Eureka</a></li>
-<li><a href="https://space.bilibili.com/13282871">卷二兔</a></li>
-</ol>
-<h3 id="参考文档">参考文档</h3>
-<ol>
-<li><a href="https://hexo.io/zh-cn/docs/">Hexo</a></li>
-<li><a href="https://butterfly.js.org/posts/21cfbf15/">butterfly</a></li>
-</ol>
-<h3 id="安装过程">安装过程</h3>
-<ol>
-<li>安装Node.js</li>
-<li>安装Git <!--这个没想清楚作用--></li>
-<li>安装Hexo</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line">hexo init &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>安装Hexo-theme-butterfly</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-theme-butterfly</span><br><span class="line">npm update hexo-theme-butterfly</span><br><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure>
-<ol start="5">
-<li>配置_config.yml和_config.butterfly.yml文件</li>
-<li>实施部署</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>上面少了一块github的配置，就不说了哈哈</p>
-</blockquote>
-<h3 id="感想">感想</h3>
-<blockquote>
-<p>昨天一整天都不在状态(或许以后很长一段时间都这样哈哈，也没关系吧，速度调节，欧力给！)，晚上临时想着也不想做那件事(正在发愁的一件事，搭完之后还是要回归那件事的)，也就想折腾一下个人博客，看看视频，跟着上面两位大哥引荐与教学，很快可以搞定的，出版就这样，其实我还有一个其他博客的，但是要买服务器、域名啥的，之后过期就丢了哈哈！</p>
-</blockquote>
-<h3 id="后记">后记</h3>
-<blockquote>
-<p>之后有空就玩玩这个，看看有没啥需要记录的。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>小记</tag>
-        <tag>搭建</tag>
       </tags>
   </entry>
   <entry>
@@ -1683,6 +1705,59 @@ Alice 要将一份签名的消息发送给 Bob,为了保证通信的安全性,�
       <tags>
         <tag>web安全</tag>
         <tag>信息泄露</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>搭建小记</title>
+    <url>/posts/53191.html</url>
+    <content><![CDATA[<h3 id="前言">前言</h3>
+<blockquote>
+<p>其实之前一直想用github搭一个了，无奈磕磕碰碰，遇点小困难就却难而退了，这几天在其他事情上也是这样，就换个地折腾一下。</p>
+</blockquote>
+<h3 id="感谢的大佬">感谢的大佬</h3>
+<ol>
+<li><a href="https://lin64850.github.io/">Eureka</a></li>
+<li><a href="https://space.bilibili.com/13282871">卷二兔</a></li>
+</ol>
+<h3 id="参考文档">参考文档</h3>
+<ol>
+<li><a href="https://hexo.io/zh-cn/docs/">Hexo</a></li>
+<li><a href="https://butterfly.js.org/posts/21cfbf15/">butterfly</a></li>
+</ol>
+<h3 id="安装过程">安装过程</h3>
+<ol>
+<li>安装Node.js</li>
+<li>安装Git <!--这个没想清楚作用--></li>
+<li>安装Hexo</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line">hexo init &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>安装Hexo-theme-butterfly</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-theme-butterfly</span><br><span class="line">npm update hexo-theme-butterfly</span><br><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>配置_config.yml和_config.butterfly.yml文件</li>
+<li>实施部署</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>上面少了一块github的配置，就不说了哈哈</p>
+</blockquote>
+<h3 id="感想">感想</h3>
+<blockquote>
+<p>昨天一整天都不在状态(或许以后很长一段时间都这样哈哈，也没关系吧，速度调节，欧力给！)，晚上临时想着也不想做那件事(正在发愁的一件事，搭完之后还是要回归那件事的)，也就想折腾一下个人博客，看看视频，跟着上面两位大哥引荐与教学，很快可以搞定的，出版就这样，其实我还有一个其他博客的，但是要买服务器、域名啥的，之后过期就丢了哈哈！</p>
+</blockquote>
+<h3 id="后记">后记</h3>
+<blockquote>
+<p>之后有空就玩玩这个，看看有没啥需要记录的。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>小记</tag>
+        <tag>搭建</tag>
       </tags>
   </entry>
   <entry>
