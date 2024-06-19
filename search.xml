@@ -1,6 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>CentOS7.9 GLIBC_2.28 not found</title>
+    <url>/posts/3f4ab5ae.html</url>
+    <content><![CDATA[<h2 id="安装C-compliler">安装C compliler</h2>
+<p><code>yum install gcc -y</code></p>
+<h2 id="升级GCC编译器">升级GCC编译器</h2>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum -y install centos-release-scl</span><br><span class="line"></span><br><span class="line">yum -y install devtoolset-8-gcc devtoolset-8-gcc-c++ devtoolset-8-binutils</span><br><span class="line"></span><br><span class="line">scl enable devtoolset-8 bash</span><br><span class="line"></span><br><span class="line">echo &quot;source /opt/rh/devtoolset-8/enable&quot; &gt;&gt;/etc/profile</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="升级make">升级make</h2>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wget http://ftp.gnu.org/gnu/make/make-4.2.tar.gz</span><br><span class="line"></span><br><span class="line">tar -xzvf make-4.2.tar.gz</span><br><span class="line"></span><br><span class="line">cd make-4.2</span><br><span class="line"></span><br><span class="line">sudo ./configure</span><br><span class="line"></span><br><span class="line">sudo make</span><br><span class="line"></span><br><span class="line">sudo make install</span><br><span class="line"></span><br><span class="line">sudo rm -rf /usr/bin/make</span><br><span class="line"></span><br><span class="line">sudo cp ./make /usr/bin/</span><br><span class="line"></span><br><span class="line">make -v</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="升级glic-2-28">升级glic-2.28</h2>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wget  https://mirror.bjtu.edu.cn/gnu/libc/glibc-2.28.tar.xz</span><br><span class="line"></span><br><span class="line">tar -xf glibc-2.28.tar.xz -C /usr/local</span><br><span class="line"></span><br><span class="line">cd /usr/local/glibc-2.28/</span><br><span class="line"></span><br><span class="line">mkdir build</span><br><span class="line"></span><br><span class="line">cd build/</span><br><span class="line"></span><br><span class="line">yum install -y bison</span><br><span class="line"></span><br><span class="line">sudo ../configure --prefix=/usr --disable-profile --enable-add-ons --with-headers=/usr/include --with-binutils=/usr/bin</span><br><span class="line"></span><br><span class="line">make  </span><br><span class="line"></span><br><span class="line">make install</span><br><span class="line"></span><br><span class="line">strings /lib64/libc.so.6 |grep GLIBC</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>区块链</category>
+      </categories>
+      <tags>
+        <tag>区块链</tag>
+        <tag>杂记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>WSL导盘</title>
+    <url>/posts/8bae2eef.html</url>
+    <content><![CDATA[<h2 id="查看WSL分发版本">查看WSL分发版本</h2>
+<p>在Windows PowerShell中输入如下命令:<code>wsl -l --all -v</code></p>
+<p>结果如下:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">NAME</th>
+<th style="text-align:center">STATE</th>
+<th style="text-align:center">VERSION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">*</td>
+<td style="text-align:center">Ubuntu-22.04</td>
+<td style="text-align:center">Running 2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="导出分发版为tar文件到d盘">导出分发版为tar文件到d盘</h2>
+<p><code>wsl --export Ubuntu-22.04 d:\wsl-ubuntu22.04.tar</code></p>
+<h2 id="注销当前分发版">注销当前分发版</h2>
+<p><code>wsl --unregister Ubuntu-22.04</code></p>
+<h2 id="重新导入并安装WSL在d-wsl-ubuntu22-04">重新导入并安装WSL在d:\wsl-ubuntu22.04</h2>
+<p><code>wsl --import Ubuntu-22.04 e:\wsl-ubuntu22.04 e:\wsl-ubuntu22.04.tar --version 2</code></p>
+<h2 id="设置默认登陆用户为安装时用户名">设置默认登陆用户为安装时用户名</h2>
+<p><code>ubuntu2204 config --default-user Username</code></p>
+<h2 id="删除tar文件-可选">删除tar文件(可选)</h2>
+<p><code>del e:\wsl-ubuntu22.04.tar</code></p>
+<h2 id="结束">结束</h2>
+<p>经过以上操作后，就将WSL的默认安装目录迁移到<code>e:\wsl-ubuntu22.04</code>目录下了。此目录即为WSL的跟文件系统。</p>
+]]></content>
+      <categories>
+        <category>杂记</category>
+      </categories>
+      <tags>
+        <tag>杂记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MathJax语法入门指南</title>
     <url>/posts/2fa412f3.html</url>
     <content><![CDATA[<p>MathJax 是一个用于在网页上显示数学公式的 JavaScript 引擎。它支持多种数学表示法，包括 LaTeX、MathML 和 AsciiMath。以下是一些常见的 MathJax 语法示例：</p>
@@ -557,48 +618,6 @@ $$f(x)=x\tag{1}$$</li>
       </tags>
   </entry>
   <entry>
-    <title>WSL导盘</title>
-    <url>/posts/8bae2eef.html</url>
-    <content><![CDATA[<h2 id="查看WSL分发版本">查看WSL分发版本</h2>
-<p>在Windows PowerShell中输入如下命令:<code>wsl -l --all -v</code></p>
-<p>结果如下:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">NAME</th>
-<th style="text-align:center">STATE</th>
-<th style="text-align:center">VERSION</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">*</td>
-<td style="text-align:center">Ubuntu-22.04</td>
-<td style="text-align:center">Running 2</td>
-</tr>
-</tbody>
-</table>
-<h2 id="导出分发版为tar文件到d盘">导出分发版为tar文件到d盘</h2>
-<p><code>wsl --export Ubuntu-22.04 d:\wsl-ubuntu22.04.tar</code></p>
-<h2 id="注销当前分发版">注销当前分发版</h2>
-<p><code>wsl --unregister Ubuntu-22.04</code></p>
-<h2 id="重新导入并安装WSL在d-wsl-ubuntu22-04">重新导入并安装WSL在d:\wsl-ubuntu22.04</h2>
-<p><code>wsl --import Ubuntu-22.04 e:\wsl-ubuntu22.04 e:\wsl-ubuntu22.04.tar --version 2</code></p>
-<h2 id="设置默认登陆用户为安装时用户名">设置默认登陆用户为安装时用户名</h2>
-<p><code>ubuntu2204 config --default-user Username</code></p>
-<h2 id="删除tar文件-可选">删除tar文件(可选)</h2>
-<p><code>del e:\wsl-ubuntu22.04.tar</code></p>
-<h2 id="结束">结束</h2>
-<p>经过以上操作后，就将WSL的默认安装目录迁移到<code>e:\wsl-ubuntu22.04</code>目录下了。此目录即为WSL的跟文件系统。</p>
-]]></content>
-      <categories>
-        <category>杂记</category>
-      </categories>
-      <tags>
-        <tag>杂记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>markdown可用图标</title>
     <url>/posts/20afcfaf.html</url>
     <content><![CDATA[<p>😄 😆 😊 😃 😏 😍 😘 😚 😳 😌 😆 😁 😉 😜 😝 😀 😗 😙 😛 😴 😟 😦 😧 😮 😬 😕 😯 😑 😒 😅 😓 😥 😩 😔 😞 😖 😨 😰 😣 😢 😭 😂 😲 😱 😫 😠 😡 😤 😪 😋 😷 😎 😵 👿 😈 😐 😶 😇 👽 💛  💡</p>
@@ -622,6 +641,91 @@ $$f(x)=x\tag{1}$$</li>
         <tag>工具</tag>
         <tag>手册</tag>
         <tag>指南</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>区块链学习笔记</title>
+    <url>/posts/6bcdfa14.html</url>
+    <content><![CDATA[<h2 id="区块链侧链和多链">区块链侧链和多链</h2>
+<p>区块链侧链（Sidechain）和多链（Multichain）是区块链技术中两种不同的扩展和互操作性解决方案。这两种概念虽然都旨在通过多条链的协作提高整体系统的效能和灵活性，但它们的工作原理和应用场景有所不同。</p>
+<h3 id="1-区块链侧链（Sidechain）">1. 区块链侧链（Sidechain）</h3>
+<p><strong>定义与目的：</strong><br>
+侧链是指与主链（比如比特币或以太坊）平行运行的独立区块链，它们之间通过特定的机制能够安全地交换资产。侧链的主要目的是扩展主链的功能性，比如增加交易速度、降低交易费用、或实验新的协议和算法。</p>
+<p><strong>工作原理：</strong><br>
+侧链通过一种称为两层锚定（Two-way Peg）的机制与主链相连。资产（如代币或加密货币）可以从主链锁定并转移到侧链上，经过一定处理后，也可以再从侧链转回主链。这种转移通常需要通过中继或锁定/解锁机制来确保资产的安全性。</p>
+<p><strong>应用示例：</strong></p>
+<ul>
+<li>Liquid Network：作为比特币的侧链，主要用于加速交易和提供更高的交易隐私。</li>
+<li>RSK：作为比特币的智能合约平台，扩展了比特币的功能。</li>
+</ul>
+<h3 id="2-多链（Multichain）">2. 多链（Multichain）</h3>
+<p><strong>定义与目的：</strong><br>
+多链是指多个独立的区块链网络，它们可以通过某种协议相互操作和交换信息或资产。多链架构的目的是利用不同链的特性和优势，形成一个分布式的、功能丰富的网络生态系统。</p>
+<p><strong>工作原理：</strong><br>
+多链通过不同的互操作协议来实现，如跨链技术（Cross-chain technology）。这可以包括桥接（Bridges）、中继链（Relay Chains）和锚定等技术。通过这些技术，不同的区块链能够在保持各自自治的同时，交换数据和价值。</p>
+<p><strong>应用示例：</strong></p>
+<ul>
+<li>Polkadot：通过中继链允许各种区块链互相通信和共享安全。</li>
+<li>Cosmos：利用区块链间通信（IBC）协议连接独立的区块链。</li>
+</ul>
+<h3 id="总结">总结</h3>
+<p>侧链主要是主链的扩展，目的在于增强主链的可扩展性和功能性，而多链则是构建一个庞大的区块链网络，通过不同链的互操作性实现更广泛的应用场景和更高的处理效率。侧链技术通常侧重于提升特定主链的性能，而多链技术则着眼于区块链技术的整体生态发展。</p>
+<h3 id="关系1">关系1</h3>
+<p>区块链侧链（Sidechains）和多链（Multichain）是区块链技术中两种不同的结构和设计概念，它们都旨在解决主链（如比特币或以太坊）的扩展性问题，但各有其特点和应用方式。</p>
+<h4 id="区块链侧链（Sidechains）">区块链侧链（Sidechains）</h4>
+<p>侧链是与主链平行存在的独立区块链，它有自己的共识机制、区块结构和安全保障措施。侧链的主要目的是通过减轻主链的负担来提高整个生态系统的可扩展性。侧链与主链之间可以进行资产的双向锁定和转移。简单来说，用户可以将资产从主链转移到侧链，进行各种交易和操作，然后再将其转回主链。</p>
+<p>侧链的关键特点包括：</p>
+<ul>
+<li><strong>独立性</strong>：虽然侧链依附于主链，但它运行在一个完全独立的区块链上。</li>
+<li><strong>双向锚定</strong>：侧链与主链之间的双向锁定机制允许资产在两者之间安全地转移。</li>
+<li><strong>定制性</strong>：侧链可以根据特定需求定制规则和逻辑，例如不同的区块时间或交易处理方式。</li>
+</ul>
+<h4 id="多链（Multichain）">多链（Multichain）</h4>
+<p>多链架构是指多个独立的区块链网络相互协作，共同构成一个更广泛的生态系统。每个链都可以有其独特的特性和优势，如不同的共识机制、交易速度或用例。多链架构的目标是通过多个专用链的协作来提高整个网络的性能和灵活性。</p>
+<p>多链的关键特点包括：</p>
+<ul>
+<li><strong>互操作性</strong>：多链架构需要不同区块链之间的高效互操作性。</li>
+<li><strong>专业化</strong>：每个链可以专注于某一特定的功能或市场需求，如金融服务、供应链管理等。</li>
+<li><strong>扩展性</strong>：通过多个链的并行运作，整体网络的处理能力和扩展性得到增强。</li>
+</ul>
+<h4 id="关系和对比">关系和对比</h4>
+<p>侧链和多链都是为了解决传统单一区块链网络在处理大量交易时面临的扩展性和效率问题。侧链通过创建与主链相连的次级链来实现这一目标，而多链则是通过建立多个独立协作的链来实现。</p>
+<p>侧链通常用于实验新技术或特定应用场景，而不必更改主链的基础架构。多链则更侧重于创建一个由多个独立区块链组成的复杂网络，每个链都有自己的特定角色和功能。</p>
+<p>总的来说，侧链和多链各有优势和局限，选择使用哪一种技术取决于特定的应用需求和场景。</p>
+<h3 id="关系2">关系2</h3>
+<p>在区块链的上下文中，侧链与多链是两个相关的概念，它们都涉及区块链网络之间的相互作用。不过，两者之间有着本质的不同以及不同的工作机制：</p>
+<ol>
+<li>
+<p><strong>侧链(Sidechains)：</strong></p>
+<ul>
+<li>侧链是相对于某个主链（例如比特币或以太坊）的链，它们有独自的区块、交易机制和安全协议，但是与主链保持连接。</li>
+<li>侧链的主要目的是扩展主链的功能，比如增加新的交易类型或改善可扩展性、隐私等，而不必改变主链本身。</li>
+<li>资产可以从主链移动到侧链，进行某些操作后又可以安全地返回主链，这通常通过一种称为双向锚定机制来实现。</li>
+</ul>
+</li>
+<li>
+<p><strong>多链(Multichain)：</strong></p>
+<ul>
+<li>多链是指多个独立的区块链网络，它们可能有不同的设计、共识机制或用例，并不一定与任何主链相连。</li>
+<li>每一条链在多链生态中都是自治的，拥有自己的节点、账本和治理结构。</li>
+<li>多链网络通过跨链技术实现互操作性，允许不同链之间的信息和价值交换。</li>
+</ul>
+</li>
+</ol>
+<p><strong>相互关系：</strong></p>
+<ul>
+<li>侧链可以被看作是多链生态中的一部分，作为主链的一个补充，它们通常专注于为主链提供特定的功能或优势。</li>
+<li>而多链更侧重于区块链之间的广泛互操作性和自治性，每个链作为一个独立的实体，可能有着不同的目标和应用场景。</li>
+<li>从更广的视角来看，侧链可能是多个特定功能链中的一个，而这些特定功能链又是整个多链网络生态系统的一部分。</li>
+</ul>
+<p>在实际应用中，侧链和多链技术可以并行发展，提供相互补充的解决方案来扩展区块链的功能性和互通性。</p>
+]]></content>
+      <categories>
+        <category>区块链</category>
+      </categories>
+      <tags>
+        <tag>区块链</tag>
+        <tag>学习记录</tag>
       </tags>
   </entry>
   <entry>
@@ -2527,91 +2631,6 @@ $$f(x)=x\tag{1}$$</li>
       </tags>
   </entry>
   <entry>
-    <title>区块链学习笔记</title>
-    <url>/posts/6bcdfa14.html</url>
-    <content><![CDATA[<h2 id="区块链侧链和多链">区块链侧链和多链</h2>
-<p>区块链侧链（Sidechain）和多链（Multichain）是区块链技术中两种不同的扩展和互操作性解决方案。这两种概念虽然都旨在通过多条链的协作提高整体系统的效能和灵活性，但它们的工作原理和应用场景有所不同。</p>
-<h3 id="1-区块链侧链（Sidechain）">1. 区块链侧链（Sidechain）</h3>
-<p><strong>定义与目的：</strong><br>
-侧链是指与主链（比如比特币或以太坊）平行运行的独立区块链，它们之间通过特定的机制能够安全地交换资产。侧链的主要目的是扩展主链的功能性，比如增加交易速度、降低交易费用、或实验新的协议和算法。</p>
-<p><strong>工作原理：</strong><br>
-侧链通过一种称为两层锚定（Two-way Peg）的机制与主链相连。资产（如代币或加密货币）可以从主链锁定并转移到侧链上，经过一定处理后，也可以再从侧链转回主链。这种转移通常需要通过中继或锁定/解锁机制来确保资产的安全性。</p>
-<p><strong>应用示例：</strong></p>
-<ul>
-<li>Liquid Network：作为比特币的侧链，主要用于加速交易和提供更高的交易隐私。</li>
-<li>RSK：作为比特币的智能合约平台，扩展了比特币的功能。</li>
-</ul>
-<h3 id="2-多链（Multichain）">2. 多链（Multichain）</h3>
-<p><strong>定义与目的：</strong><br>
-多链是指多个独立的区块链网络，它们可以通过某种协议相互操作和交换信息或资产。多链架构的目的是利用不同链的特性和优势，形成一个分布式的、功能丰富的网络生态系统。</p>
-<p><strong>工作原理：</strong><br>
-多链通过不同的互操作协议来实现，如跨链技术（Cross-chain technology）。这可以包括桥接（Bridges）、中继链（Relay Chains）和锚定等技术。通过这些技术，不同的区块链能够在保持各自自治的同时，交换数据和价值。</p>
-<p><strong>应用示例：</strong></p>
-<ul>
-<li>Polkadot：通过中继链允许各种区块链互相通信和共享安全。</li>
-<li>Cosmos：利用区块链间通信（IBC）协议连接独立的区块链。</li>
-</ul>
-<h3 id="总结">总结</h3>
-<p>侧链主要是主链的扩展，目的在于增强主链的可扩展性和功能性，而多链则是构建一个庞大的区块链网络，通过不同链的互操作性实现更广泛的应用场景和更高的处理效率。侧链技术通常侧重于提升特定主链的性能，而多链技术则着眼于区块链技术的整体生态发展。</p>
-<h3 id="关系1">关系1</h3>
-<p>区块链侧链（Sidechains）和多链（Multichain）是区块链技术中两种不同的结构和设计概念，它们都旨在解决主链（如比特币或以太坊）的扩展性问题，但各有其特点和应用方式。</p>
-<h4 id="区块链侧链（Sidechains）">区块链侧链（Sidechains）</h4>
-<p>侧链是与主链平行存在的独立区块链，它有自己的共识机制、区块结构和安全保障措施。侧链的主要目的是通过减轻主链的负担来提高整个生态系统的可扩展性。侧链与主链之间可以进行资产的双向锁定和转移。简单来说，用户可以将资产从主链转移到侧链，进行各种交易和操作，然后再将其转回主链。</p>
-<p>侧链的关键特点包括：</p>
-<ul>
-<li><strong>独立性</strong>：虽然侧链依附于主链，但它运行在一个完全独立的区块链上。</li>
-<li><strong>双向锚定</strong>：侧链与主链之间的双向锁定机制允许资产在两者之间安全地转移。</li>
-<li><strong>定制性</strong>：侧链可以根据特定需求定制规则和逻辑，例如不同的区块时间或交易处理方式。</li>
-</ul>
-<h4 id="多链（Multichain）">多链（Multichain）</h4>
-<p>多链架构是指多个独立的区块链网络相互协作，共同构成一个更广泛的生态系统。每个链都可以有其独特的特性和优势，如不同的共识机制、交易速度或用例。多链架构的目标是通过多个专用链的协作来提高整个网络的性能和灵活性。</p>
-<p>多链的关键特点包括：</p>
-<ul>
-<li><strong>互操作性</strong>：多链架构需要不同区块链之间的高效互操作性。</li>
-<li><strong>专业化</strong>：每个链可以专注于某一特定的功能或市场需求，如金融服务、供应链管理等。</li>
-<li><strong>扩展性</strong>：通过多个链的并行运作，整体网络的处理能力和扩展性得到增强。</li>
-</ul>
-<h4 id="关系和对比">关系和对比</h4>
-<p>侧链和多链都是为了解决传统单一区块链网络在处理大量交易时面临的扩展性和效率问题。侧链通过创建与主链相连的次级链来实现这一目标，而多链则是通过建立多个独立协作的链来实现。</p>
-<p>侧链通常用于实验新技术或特定应用场景，而不必更改主链的基础架构。多链则更侧重于创建一个由多个独立区块链组成的复杂网络，每个链都有自己的特定角色和功能。</p>
-<p>总的来说，侧链和多链各有优势和局限，选择使用哪一种技术取决于特定的应用需求和场景。</p>
-<h3 id="关系2">关系2</h3>
-<p>在区块链的上下文中，侧链与多链是两个相关的概念，它们都涉及区块链网络之间的相互作用。不过，两者之间有着本质的不同以及不同的工作机制：</p>
-<ol>
-<li>
-<p><strong>侧链(Sidechains)：</strong></p>
-<ul>
-<li>侧链是相对于某个主链（例如比特币或以太坊）的链，它们有独自的区块、交易机制和安全协议，但是与主链保持连接。</li>
-<li>侧链的主要目的是扩展主链的功能，比如增加新的交易类型或改善可扩展性、隐私等，而不必改变主链本身。</li>
-<li>资产可以从主链移动到侧链，进行某些操作后又可以安全地返回主链，这通常通过一种称为双向锚定机制来实现。</li>
-</ul>
-</li>
-<li>
-<p><strong>多链(Multichain)：</strong></p>
-<ul>
-<li>多链是指多个独立的区块链网络，它们可能有不同的设计、共识机制或用例，并不一定与任何主链相连。</li>
-<li>每一条链在多链生态中都是自治的，拥有自己的节点、账本和治理结构。</li>
-<li>多链网络通过跨链技术实现互操作性，允许不同链之间的信息和价值交换。</li>
-</ul>
-</li>
-</ol>
-<p><strong>相互关系：</strong></p>
-<ul>
-<li>侧链可以被看作是多链生态中的一部分，作为主链的一个补充，它们通常专注于为主链提供特定的功能或优势。</li>
-<li>而多链更侧重于区块链之间的广泛互操作性和自治性，每个链作为一个独立的实体，可能有着不同的目标和应用场景。</li>
-<li>从更广的视角来看，侧链可能是多个特定功能链中的一个，而这些特定功能链又是整个多链网络生态系统的一部分。</li>
-</ul>
-<p>在实际应用中，侧链和多链技术可以并行发展，提供相互补充的解决方案来扩展区块链的功能性和互通性。</p>
-]]></content>
-      <categories>
-        <category>区块链</category>
-      </categories>
-      <tags>
-        <tag>学习记录</tag>
-        <tag>区块链</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>卡罗尔·德韦克_《终身成长》</title>
     <url>/posts/9d1ea4d6.html</url>
     <content><![CDATA[<h2 id="引言">引言</h2>
@@ -3067,59 +3086,6 @@ $$f(x)=x\tag{1}$$</li>
       <tags>
         <tag>二课</tag>
         <tag>阅读</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>搭建小记</title>
-    <url>/posts/53191.html</url>
-    <content><![CDATA[<h3 id="前言">前言</h3>
-<blockquote>
-<p>其实之前一直想用github搭一个了，无奈磕磕碰碰，遇点小困难就却难而退了，这几天在其他事情上也是这样，就换个地折腾一下。</p>
-</blockquote>
-<h3 id="感谢的大佬">感谢的大佬</h3>
-<ol>
-<li><a href="https://lin64850.github.io/">Eureka</a></li>
-<li><a href="https://space.bilibili.com/13282871">卷二兔</a></li>
-</ol>
-<h3 id="参考文档">参考文档</h3>
-<ol>
-<li><a href="https://hexo.io/zh-cn/docs/">Hexo</a></li>
-<li><a href="https://butterfly.js.org/posts/21cfbf15/">butterfly</a></li>
-</ol>
-<h3 id="安装过程">安装过程</h3>
-<ol>
-<li>安装Node.js</li>
-<li>安装Git <!--这个没想清楚作用--></li>
-<li>安装Hexo</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line">hexo init &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>安装Hexo-theme-butterfly</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-theme-butterfly</span><br><span class="line">npm update hexo-theme-butterfly</span><br><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure>
-<ol start="5">
-<li>配置_config.yml和_config.butterfly.yml文件</li>
-<li>实施部署</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>上面少了一块github的配置，就不说了哈哈</p>
-</blockquote>
-<h3 id="感想">感想</h3>
-<blockquote>
-<p>昨天一整天都不在状态(或许以后很长一段时间都这样哈哈，也没关系吧，速度调节，欧力给！)，晚上临时想着也不想做那件事(正在发愁的一件事，搭完之后还是要回归那件事的)，也就想折腾一下个人博客，看看视频，跟着上面两位大哥引荐与教学，很快可以搞定的，出版就这样，其实我还有一个其他博客的，但是要买服务器、域名啥的，之后过期就丢了哈哈！</p>
-</blockquote>
-<h3 id="后记">后记</h3>
-<blockquote>
-<p>之后有空就玩玩这个，看看有没啥需要记录的。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>小记</tag>
-        <tag>搭建</tag>
       </tags>
   </entry>
   <entry>
@@ -4750,6 +4716,59 @@ $$f(x)=x\tag{1}$$</li>
       <tags>
         <tag>二课</tag>
         <tag>阅读</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>搭建小记</title>
+    <url>/posts/53191.html</url>
+    <content><![CDATA[<h3 id="前言">前言</h3>
+<blockquote>
+<p>其实之前一直想用github搭一个了，无奈磕磕碰碰，遇点小困难就却难而退了，这几天在其他事情上也是这样，就换个地折腾一下。</p>
+</blockquote>
+<h3 id="感谢的大佬">感谢的大佬</h3>
+<ol>
+<li><a href="https://lin64850.github.io/">Eureka</a></li>
+<li><a href="https://space.bilibili.com/13282871">卷二兔</a></li>
+</ol>
+<h3 id="参考文档">参考文档</h3>
+<ol>
+<li><a href="https://hexo.io/zh-cn/docs/">Hexo</a></li>
+<li><a href="https://butterfly.js.org/posts/21cfbf15/">butterfly</a></li>
+</ol>
+<h3 id="安装过程">安装过程</h3>
+<ol>
+<li>安装Node.js</li>
+<li>安装Git <!--这个没想清楚作用--></li>
+<li>安装Hexo</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line">hexo init &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>安装Hexo-theme-butterfly</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-theme-butterfly</span><br><span class="line">npm update hexo-theme-butterfly</span><br><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>配置_config.yml和_config.butterfly.yml文件</li>
+<li>实施部署</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>上面少了一块github的配置，就不说了哈哈</p>
+</blockquote>
+<h3 id="感想">感想</h3>
+<blockquote>
+<p>昨天一整天都不在状态(或许以后很长一段时间都这样哈哈，也没关系吧，速度调节，欧力给！)，晚上临时想着也不想做那件事(正在发愁的一件事，搭完之后还是要回归那件事的)，也就想折腾一下个人博客，看看视频，跟着上面两位大哥引荐与教学，很快可以搞定的，出版就这样，其实我还有一个其他博客的，但是要买服务器、域名啥的，之后过期就丢了哈哈！</p>
+</blockquote>
+<h3 id="后记">后记</h3>
+<blockquote>
+<p>之后有空就玩玩这个，看看有没啥需要记录的。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>小记</tag>
+        <tag>搭建</tag>
       </tags>
   </entry>
   <entry>
@@ -14029,8 +14048,8 @@ $W_{global}^{‘}=W_{global}-\alpha ·G_{local}(W_{global};x_t,y_t)$<br>
         <category>区块链</category>
       </categories>
       <tags>
-        <tag>学习记录</tag>
         <tag>区块链</tag>
+        <tag>学习记录</tag>
         <tag>网络安全</tag>
       </tags>
   </entry>
